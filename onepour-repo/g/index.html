@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A friend challenged you — One Pour</title>
+<meta name="description" content="Beat your friend's sand pour in today's One Pour puzzle.">
+<meta property="og:title" content="Can you beat my pour?">
+<meta property="og:description" content="Today's One Pour puzzle. One bonus try to beat your friend.">
+<meta property="og:image" content="https://ahseust-wq.github.io/onepour/img/shot-ghost.webp">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="../">One Pour</a>
+  <nav class="nav-links"><a class="keep" href="../">What is this?</a></nav>
+</header>
+<main class="ghost">
+  <div class="card">
+    <div class="eyebrow" id="gPuzzle">Ghost pour</div>
+    <h1>Can you beat my pour?</h1>
+    <div class="score" id="gScore">—</div>
+    <p id="gText">Open this link on an Android phone with One Pour installed to see the pour and get one bonus try.</p>
+    <div class="btns">
+      <a class="btn2 primary" id="gOpen" href="#">Open in One Pour</a>
+      <a class="btn2" id="gPlay" href="https://play.google.com/store/apps/details?id=com.seus.onepour">Get One Pour on Google Play</a>
+      <button class="btn2" id="gCopy" type="button">Copy ghost code</button>
+    </div>
+    <p style="font-size:14px;color:var(--ink-2);margin-top:16px">Already have the app? You can also paste the code under <b>Ghost code</b> on the home screen.</p>
+    <code class="codebox" id="gCode"></code>
+  </div>
+</main>
+<script src="../core.js"></script>
+<script>
+(function () {
+  const C = window.OnePourCore;
+  const PLAY = 'https://play.google.com/store/apps/details?id=com.seus.onepour';
+  const code = (location.hash || '').replace(/^#(g=)?/, '');
+  const g = code ? C.decodeCode(code) : null;
+  const $ = (id) => document.getElementById(id);
+  if (!g) {
+    $('gText').textContent = 'This link has no valid pour in it. Ask your friend to share again, or play today\'s puzzle yourself.';
+    $('gOpen').style.display = 'none'; $('gCopy').style.display = 'none'; $('gCode').style.display = 'none';
+    return;
+  }
+  const lv = C.generateLevel(g.key);
+  const today = C.dateKey(new Date());
+  const num = C.puzzleNumber(g.key);
+  $('gPuzzle').textContent = 'One Pour' + (num >= 1 ? ' #' + num : '') + ' · ' + lv.dayName;
+  $('gScore').textContent = g.score.toFixed(1) + '%';
+  $('gText').textContent = g.key === today
+    ? 'This is today\'s puzzle. Open it in the app to see my pour as a blue stream and get one bonus try.'
+    : 'This pour is from an earlier puzzle (' + g.key + '). Ghost bonus tries work on the same day; older puzzles are in the Pour Pass archive.';
+  $('gCode').textContent = code;
+  // Android: open the app if installed, otherwise fall back to the Play Store.
+  $('gOpen').href = 'intent://g/' + code + '#Intent;scheme=onepour;package=com.seus.onepour;S.browser_fallback_url=' + encodeURIComponent(PLAY) + ';end';
+  if (!/Android/i.test(navigator.userAgent)) $('gOpen').href = PLAY;
+  $('gCopy').addEventListener('click', function () {
+    const done = () => { this.textContent = 'Copied!'; setTimeout(() => (this.textContent = 'Copy ghost code'), 1600); };
+    if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, done); else done();
+  });
+})();
+</script>
+</body>
+</html>

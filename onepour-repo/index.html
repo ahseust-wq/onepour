@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Pour — the daily sand puzzle</title>
+<meta name="description" content="One puzzle a day. Three tries. Pour sand to the line. A calm, tactile daily puzzle for Android.">
+<meta property="og:title" content="One Pour — the daily sand puzzle">
+<meta property="og:description" content="One puzzle a day. Three tries. Pour sand to the line.">
+<meta property="og:image" content="https://ahseust-wq.github.io/onepour/img/shot-result.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahseust-wq.github.io/onepour/">
+<link rel="canonical" href="https://ahseust-wq.github.io/onepour/">
+<meta name="theme-color" content="#F4EDE1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23F4EDE1'/%3E%3Cpath d='M7 12h2.5v11h13V12H25v13.5H7z' fill='%232E2924'/%3E%3Cpath d='M9.5 18l5-3h3l5 2v6h-13z' fill='%23D9A75E'/%3E%3Cpath d='M15 4h2v10h-2z' fill='%23D9A75E'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="./">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 12h2.5v11h13V12H25v13.5H7z" fill="#2E2924"/><path d="M9.5 18l5-3h3l5 2v6h-13z" fill="#D9A75E"/><path d="M15 4h2v10h-2z" fill="#D9A75E"/></svg>
+    One Pour
+  </a>
+  <nav class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a class="keep" href="privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">A daily puzzle for Android</div>
+      <h1>One puzzle a day.<br>Three tries.<br>Pour sand to the line.</h1>
+      <p class="lead">Hold to pour, let go to stop. Everyone in the world gets the same jar each day. Your best pour becomes a piece of sand art on your shelf.</p>
+      <a class="cta" id="playLink" href="https://play.google.com/store/apps/details?id=com.seus.onepour">
+        <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M2 1.5l14 12.5L2 26.5z" fill="#D9A75E"/><path d="M16 14l5-4.5 3.5 2c1.3.8 1.3 2.2 0 3l-3.5 2z" fill="#F4EDE1"/></svg>
+        <span><small>Get it on</small><b>Google Play</b></span>
+      </a>
+      <div class="cta-note">Free · no account · works offline</div>
+    </div>
+    <div class="demo-card" aria-label="Live demo of a pour">
+      <div class="demo-top"><span><b id="demoNum">Today's jar</b> · <span id="demoDay"></span></span><span>auto-pour demo</span></div>
+      <canvas id="demo" width="384" height="600"></canvas>
+      <div class="demo-score" id="demoScore"></div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-lead">It takes 30 seconds to learn and a lifetime to hit 100%.</p>
+      <div class="steps">
+        <div class="step"><h3>Hold to pour</h3><p>A spout sweeps across the top on its own. Hold anywhere on the screen to pour, release to stop. That is the whole control scheme.</p></div>
+        <div class="step"><h3>Fill to the line</h3><p>Each chamber has a dashed fill line. Too little or too much costs points, and so does sand that spills. Tap Settle when you are happy.</p></div>
+        <div class="step"><h3>Get one number</h3><p>Your accuracy, to one decimal — like 97.4%. Three tries a day, your best counts. Then the jar goes on your shelf until tomorrow.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shots">
+        <figure><img src="img/shot-pour.webp" alt="Pouring sand into a three-chamber jar" loading="lazy"><figcaption>Pour into every chamber</figcaption></figure>
+        <figure><img src="img/shot-result.webp" alt="Result screen with a score" loading="lazy"><figcaption>One score, three tries</figcaption></figure>
+        <figure><img src="img/shot-ghost.webp" alt="Ghost pour showing a friend's timing in blue" loading="lazy"><figcaption>Race a friend's ghost</figcaption></figure>
+        <figure><img src="img/shot-shelf.webp" alt="Shelf of collected sand jars" loading="lazy"><figcaption>Collect your jars</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2 class="section-title">Small game, lots of feel</h2>
+      <p class="section-lead">Made for a calm minute with your morning coffee — and a quiet rivalry with your friends.</p>
+      <div class="features">
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#2E2924" stroke-width="2"/><path d="M12 7v5l3 2" stroke="#C0563B" stroke-width="2" fill="none"/></svg></div><div><h3>The same puzzle for everyone</h3><p>A new jar every day at midnight, identical worldwide. Compare scores without spoilers.</p></div></div>
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 20V10h3v10zM10.5 20V6h3v14zM17 20V3h3v17z" fill="#D9A75E"/></svg></div><div><h3>A week that builds</h3><p>Monday is one gentle chamber. By Saturday it is four chambers and ledges that bounce your sand.</p></div></div>
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 9h3v10h8V9h3v12H5z" fill="#2E2924"/><path d="M8 15l3-2h2l3 1v5H8z" fill="#C0563B"/></svg></div><div><h3>A shelf of sand art</h3><p>Every day's best pour is kept as a layered jar. Pour all week and unlock rare sand colours.</p></div></div>
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3c4 0 7 3 7 7v11l-2.3-1.6L14.4 21 12 19.4 9.6 21l-2.3-1.6L5 21V10c0-4 3-7 7-7z" fill="#3C78D8" opacity=".8"/><circle cx="9.5" cy="10" r="1.3" fill="#fff"/><circle cx="14.5" cy="10" r="1.3" fill="#fff"/></svg></div><div><h3>Ghost pours</h3><p>Share your pour as a link. Friends see your timing as a blue stream and get one bonus try to beat you.</p></div></div>
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="#2E2924" stroke-width="2"/><path d="M10 9l5 3-5 3z" fill="#C0563B"/></svg></div><div><h3>Share a replay clip</h3><p>One tap turns your best pour into a short video, ready for your story or group chat.</p></div></div>
+        <div class="feature"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0114 0" fill="none" stroke="#2E2924" stroke-width="2"/><path d="M4 12h4v7H4zM16 12h4v7h-4z" fill="#D9A75E"/></svg></div><div><h3>Sound and touch</h3><p>Soft sand hiss, haptic ticks and a slow score reveal. Plays fully offline.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Your week of jars</h2>
+      <p class="section-lead">Difficulty rises from Monday to Saturday. Sunday is a wide, relaxed jar.</p>
+      <div class="week">
+        <div class="day"><b>Mon</b><div class="bars"><i style="height:60%"></i></div><span>1 chamber</span></div>
+        <div class="day"><b>Tue</b><div class="bars"><i style="height:55%"></i><i style="height:40%"></i></div><span>2 chambers</span></div>
+        <div class="day"><b>Wed</b><div class="bars"><i style="height:75%"></i><i style="height:30%"></i></div><span>uneven</span></div>
+        <div class="day"><b>Thu</b><div class="bars"><i style="height:50%"></i><i style="height:70%"></i><i style="height:35%"></i></div><span>+ ledge</span></div>
+        <div class="day"><b>Fri</b><div class="bars"><i style="height:65%"></i><i style="height:30%"></i><i style="height:80%"></i></div><span>faster</span></div>
+        <div class="day"><b>Sat</b><div class="bars"><i style="height:40%"></i><i style="height:75%"></i><i style="height:30%"></i><i style="height:60%"></i></div><span>4 chambers</span></div>
+        <div class="day"><b>Sun</b><div class="bars"><i style="height:50%"></i><i style="height:55%"></i></div><span>relax</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap pass">
+      <div>
+        <h2>Pour Pass</h2>
+        <p>The daily puzzle is free for everyone, forever. Pour Pass adds unlimited practice jars, the full archive of past puzzles, and removes all ads.</p>
+      </div>
+      <div class="prices">
+        <div class="price"><span>Monthly</span><b>€1.99</b></div>
+        <div class="price"><span>Lifetime</span><b>€14.99</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <h2 class="section-title">FAQ</h2>
+      <details><summary>Do I need an account?</summary><p>No. There is no sign-up and no login. Your scores, streak and jars are stored on your phone.</p></details>
+      <details><summary>Does it work offline?</summary><p>Yes. Puzzles are generated on your device from the date, so you can pour on a plane. Ads and purchases need a connection.</p></details>
+      <details><summary>When does the new puzzle arrive?</summary><p>At midnight in your local time zone. Everyone gets the same puzzle for the same date.</p></details>
+      <details><summary>How do ghost pours work?</summary><p>After a pour, tap Share. Your friend opens the link, sees your score, and gets one bonus try with your pour timing shown as a blue stream.</p></details>
+      <details><summary>Are there ads?</summary><p>There are no ads while you pour. A small banner appears on menu screens, and an occasional full-screen ad may show between results. Pour Pass removes all ads.</p></details>
+      <details><summary>I bought Pour Pass on another phone</summary><p>Install One Pour with the same Google account and open the app. Your purchase is restored automatically by Google Play.</p></details>
+      <details><summary>How do I contact you?</summary><p>Email <a href="mailto:__CONTACT_EMAIL__">__CONTACT_EMAIL__</a>. We read everything.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 One Pour</span>
+    <span><a href="privacy.html">Privacy policy</a> · <a href="impressum.html">Impressum</a> · <a href="mailto:__CONTACT_EMAIL__">Contact</a></span>
+  </div>
+</footer>
+
+<script src="core.js"></script>
+<script>
+// Live hero demo: today's real puzzle, poured by the built-in reference bot, replayed on loop.
+(function () {
+  const C = window.OnePourCore, W = C.W, H = C.H;
+  const cv = document.getElementById('demo'), ctx = cv.getContext('2d');
+  const off = document.createElement('canvas'); off.width = W; off.height = H;
+  const octx = off.getContext('2d');
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const key = C.dateKey(new Date());
+  const valid = C.puzzleNumber(key) >= 1;
+  const level = C.generateLevel(valid ? key : '2026-11-19');
+  document.getElementById('demoNum').textContent = valid ? '#' + level.number : 'Sample jar';
+  document.getElementById('demoDay').textContent = level.dayName;
+  const bot = C.botPlay(level);
+
+  function draw(sim) {
+    const img = octx.createImageData(W, H), d = img.data, g = sim.g, t = level.target;
+    for (let i = 0; i < W * H; i++) {
+      const c = g[i]; let r = 244, gg = 237, b = 225;
+      if (c === 1) { if (i >= (H - 1) * W) { r = 214; gg = 200; b = 176; } else { r = 46; gg = 41; b = 36; } }
+      else if (c >= 2) { const p = level.palette[c - 2], n = ((Math.imul(i, 2654435761) >>> 28) & 7) - 3; r = p[0] + n * 3; gg = p[1] + n * 3; b = p[2] + n * 3; }
+      else if (t[i]) { r = 231; gg = 220; b = 200; }
+      const o = i * 4; d[o] = r; d[o + 1] = gg; d[o + 2] = b; d[o + 3] = 255;
+    }
+    level.chambers.forEach((ch) => { const y = ch.fillTop - 1; for (let x = ch.a; x <= ch.b; x++) { const i = y * W + x; if (g[i] === 0 && (x - ch.a) % 4 < 2) { const o = i * 4; d[o] = 192; d[o + 1] = 86; d[o + 2] = 59; } } });
+    octx.putImageData(img, 0, 0);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(off, 0, 0, W, H, 0, 0, cv.width, cv.height);
+    if (sim.finishStep < 0) {
+      const sc = cv.width / W, sx = C.spoutXAt(level, sim.step + 1);
+      ctx.fillStyle = '#2E2924'; ctx.fillRect((sx - 2) * sc, 0, 5 * sc, 1.5 * sc); ctx.fillRect((sx - 1) * sc, 1.5 * sc, 3 * sc, sc);
+    }
+  }
+
+  const scoreEl = document.getElementById('demoScore');
+  if (reduce) { const s = C.replay(level, bot.rec); draw(s); scoreEl.textContent = bot.score.toFixed(1) + '%'; return; }
+  let sim, k, pause;
+  function reset() { sim = new C.Sim(level); k = 0; pause = 0; scoreEl.textContent = ''; }
+  reset();
+  function frame() {
+    if (sim.settled) {
+      if (pause === 0) scoreEl.textContent = bot.score.toFixed(1) + '%';
+      if (++pause > 150) reset();
+    } else {
+      for (let i = 0; i < 2 && !sim.settled; i++) {
+        const ev = bot.rec.events;
+        while (k < ev.length && ev[k] === sim.step) { sim.setHold(!sim.holding); k++; }
+        if (sim.step === bot.rec.finishStep) sim.finish();
+        sim.tick();
+      }
+    }
+    draw(sim);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
