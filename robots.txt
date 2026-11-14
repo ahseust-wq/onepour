@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /g/
+Sitemap: https://onepour.app/sitemap.xml
